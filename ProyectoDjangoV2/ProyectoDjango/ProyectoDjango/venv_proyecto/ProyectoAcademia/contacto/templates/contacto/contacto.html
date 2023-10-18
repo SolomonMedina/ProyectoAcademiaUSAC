@@ -1,0 +1,25 @@
+{% extends "AcademiaApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="contenedorFormulario">
+        
+        <form action="" method="POST" >
+            {% csrf_token %}
+            <p style="color:black; margin: 10px 20px; "><b>Formulario para contactar con nuestro equipo:</b></p> 
+            <table style="color:black; margin: 20px auto; text-align: left;">{{miFormulario.as_table}}</table>
+            <p style="width: 150px; margin: 10px auto; text-align: center;">
+            <input type="submit" value="Enviar" style="width: 150px;">
+
+            {% if "valido" in request.GET %}
+                <p style="color:black; margin: 20px auto; text-align: center;"><b>Información enviada correctamente, gracias</b></p>
+            {% endif %}
+
+            </p>
+        </form>
+    </div>
+    
+
+{% endblock %}

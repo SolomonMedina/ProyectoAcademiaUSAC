@@ -1,0 +1,80 @@
+{% extends "AcademiaApp/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+  <!-- login -->
+    <!-- Normal Breadcrumb Begin -->
+    <section class="normal-breadcrumb set-bg" data-setbg="img/normal-breadcrumb.jpg">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <div class="normal__breadcrumb__text">
+                      <h2>Login</h2>
+                      <p>Bienvenido, que gusto verte de nuevo</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Normal Breadcrumb End -->
+
+  <!-- Login Section Begin -->
+  <section class="login spad">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="login__form">
+                      <h3>Iniciar Sesión</h3>
+                      <form action="" method="POST">
+                        {% csrf_token %}
+                        <div style="width: 100%; margin-right: 50px; ">
+
+                            {{form|crispy}}
+                            
+                            <div style="text-align: center;">
+                                <br><button type="submit" class="btn btn-success">Iniciar Sesión</button>
+                            </div>
+                
+                            {% if messages %}
+                                {% for mensaje in messages %}
+                                <div style="margin-top: 40px; ; text-align: center;">
+                                    <span class="alert alert-{{mensaje.tags}}" style="text-align: center;">
+                                    {{mensaje}}
+                                    </span>
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="{% url 'reconocimiento_facial' %}" class="site-btn" style="margin-bottom: 50px; background-color: rgb(255, 208, 0); color: black;">Login Reconocimiento Facial</a>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <a href="{% url 'Contacto' %}" class="forget_pass">¿Olvidaste tu contraseña?</a>
+                        </div>
+
+
+                      </form>
+                      
+                  </div>
+              </div>
+              <div class="col-lg-6" style="margin-top: 120px; ">
+                <div class="login__register">
+                    <h3>¿No posees una cuenta?</h3>
+                    <a href="{% url 'Autenticacion' %}" class="primary-btn" style="background-color: rgb(255, 208, 0); color: black;">Registrate ahora</a>
+                </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Login end -->
+
+  {% endblock %}
+
+
+
+ 

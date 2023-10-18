@@ -1,0 +1,438 @@
+{% extends "AcademiaApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+    <!-- Carrusel begin-->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__slider owl-carousel">
+                <div class="hero__items set-bg" data-setbg="{% static 'AcademiaApp/images/USAC.png' %}">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label" style="color: #1d0092;">Nosotros</div>
+                                <h2 style="color: #ffffff;">347 años promoviendo una educación pública</h2>
+                                <p style="color: #ffffff;">"La educación no es preparación para la vida; la educación es la vida en sí misma"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__items set-bg" data-setbg="{% static 'AcademiaApp/images/inegnieria.jpg' %}">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label" style="color: #000000;">Nuestro campus</div>
+                                <h2 style="color: #ffffff;">La ciudad universitaria cuenta con 35 edificios</h2>
+                                <p style="color: #ffffff;">Laboratorios, unidades académicas, centros de investigación, la biblioteca y oficinas administrativas son solo parte de nuestras 180 manzanas </p>
+                                <a href="https://www.usac.edu.gt/mapausac.php"><span>Ve nuestro mapa</span> <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__items set-bg" data-setbg="{% static 'AcademiaApp/images/laboratori.jpg' %}">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label" style="color: #000000;">Que hacemos</div>
+                                <h2 style="color: #ffffff;">Nos especializamos en Ingenieria</h2>
+                                <p style="color: #ffffff;">Logueate o crea tu cuenta gratis y ve nuestros cursos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Carrusel End -->
+
+     <!-- Service Start --> 
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <h5 class="mb-3">Instructores calificados</h5>
+                            <p>Poseemos una variedad de instuctores con experiencia y conocimiento en los temas que imparten.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <h5 class="mb-3">Clases Online</h5>
+                            <p>Tenemos disponibles tanto cursos virtuales como prescenciales, aprende de la forma que desees.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                            <h5 class="mb-3">Laboratiorios y proyectos</h5>
+                            <p>Multiples laboratorios para fomentar la experiencia y ambientes controlados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book text-primary mb-4"></i>
+                            <h5 class="mb-3">Bibliotecas</h5>
+                            <p>Servicios de biblioteca virtaul, como varios establecimientos dentro del campus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Nuestros cursos --> 
+    <section class="our-courses" id="courses">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading">
+              <h2>Nuestros Cursos Populares</h2>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="owl-courses-item owl-carousel">
+              <div class="item">
+                <img src="{% static 'AcademiaApp/images/course-01.jpg' %}" alt="Course One">
+                <div class="down-content">
+                  <h4>Telecomunicaciones y Redes Locales</h4>
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-8">
+                        <ul>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="{% static 'AcademiaApp/images/course-02.jpg' %}" alt="Course Two">
+                <div class="down-content">
+                  <h4>Electronica Basica y Intruducción a Circuitos</h4>
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-8">
+                        <ul>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="{% static 'AcademiaApp/images/course-03.jpg' %}" alt="">
+                <div class="down-content">
+                  <h4>Microcontroladores, aplicaciones y programación</h4>
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-8">
+                        <ul>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="{% static 'AcademiaApp/images/course-04.jpg' %}" alt="">
+                <div class="down-content">
+                  <h4>Lenguajes de Programación Avanzados y sus Aplicaciones</h4>
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-8">
+                        <ul>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="{% static 'AcademiaApp/images/course-05.jpg' %}" alt="">
+                <div class="down-content">
+                  <h4>Tecnología Biónica 3D y Electronica Medica </h4>
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-8">
+                        <ul>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="{% static 'AcademiaApp/images/course-06.jpg' %}" alt="">
+                <div class="down-content">
+                  <h4>Metodología de la Investigación</h4>
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-8">
+                        <ul>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="{% static 'AcademiaApp/images/course-07.jpg' %}" alt="">
+                <div class="down-content">
+                  <h4>Matematica Aplicada a la Divergencia</h4>
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-8">
+                        <ul>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="{% static 'AcademiaApp/images/course-08.jpg' %}" alt="">
+                <div class="down-content">
+                  <h4>JavaScript y sus Aplicaciones</h4>
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-8">
+                        <ul>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- nuestros cursos End -->
+    
+
+
+    <!-- Nosotros --> 
+    <section class="ftco-counter" id="section-counter">
+    	<div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-6 text-center heading-section ftco-animate">
+            <h2 class="mb-4" style="color: #ffffff;">Somos expertos en educación</h2>
+          </div>
+        </div>
+				<div class="row">
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+              	<div class="icon"><span class="fa fa-calendar"></span></div>
+                <strong class="number" data-number="347">0</strong>
+              	<span>Nuestros años de Experiencia</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+              	<div class="icon"><span class="fa fa-briefcase"></span></div>
+                <strong class="number" data-number="5897">0</strong>
+              	<span>Proyectos profesionales completados</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+              	<div class="icon"><span class="fa fa-users"></span></div>
+                <strong class="number" data-number="19768">0</strong>
+              	<span>Estudiantes certificados</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+              	<div class="icon"><span class="fa fa-bar-chart"></span></div>
+                <strong class="number" data-number="107">0</strong>
+              	<span>Profesores calificados</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+    <!-- Nosotros End -->
+
+    <section class="ftco-section ftco-no-pb ftco-no-pt">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-6 text-center heading-section ftco-animate">
+          <h2 class="mb-4" style="color: #ffffff;">      </h2>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Proyectos --> 
+    <section class="ftco-section ftco-no-pb ftco-no-pt">
+			<div class="container-fluid px-md-0">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-6 text-center heading-section ftco-animate">
+            <h2 class="mb-4" style="color: #ffffff;">Proyectos Destacados</h2>
+          </div>
+        </div>
+				<div class="row no-gutters">
+          <div class="col-md-3 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(../../static/AcademiaApp/images/work-1.jpg);">
+            	<a href="{% static 'AcademiaApp/images/work-1.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="fa fa-expand"></span>
+	    				</a>
+            	<div class="desc w-100 px-4">
+	              <div class="text w-100 mb-3">
+	              	<h2>Modelo a Escala de Ciudad Inteligente</h2>
+	              	<span>Laboratorio de Electrónica Básica</span>
+	              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(../../static/AcademiaApp/images/work-2.jpg);">
+            	<a href="{% static 'AcademiaApp/images/work-2.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="fa fa-expand"></span>
+	    				</a>
+            	<div class="desc w-100 px-4">
+	              <div class="text w-100 mb-3">
+	              	<h2><a href="work-single.html">Vivero Autosustentable con Control Remoto</a></h2>
+	              	<span>Laboratorio de Electronica Aplicada</span>
+	              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(../../static/AcademiaApp/images/work-3.jpg);">
+            	<a href="{% static 'AcademiaApp/images/work-3.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="fa fa-expand"></span>
+	    				</a>
+            	<div class="desc w-100 px-4">
+	              <div class="text w-100 mb-3">
+	              	<h2><a href="work-single.html">Automovil Solar</a></h2>
+	              	<span>Laboratorio de Mecanica</span>
+	              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(../../static/AcademiaApp/images/work-4.jpg);">
+            	<a href="{% static 'AcademiaApp/images/work-4.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="fa fa-expand"></span>
+	    				</a>
+            	<div class="desc w-100 px-4">
+	              <div class="text w-100 mb-3">
+	              	<h2><a href="work-single.html">Sangre Sintetica</a></h2>
+	              	<span>Laboratorio de Quimica</span>
+	              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(../../static/AcademiaApp/images/work-5.jpg);">
+            	<a href="{% static 'AcademiaApp/images/work-5.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="fa fa-expand"></span>
+	    				</a>
+            	<div class="desc w-100 px-4">
+	              <div class="text w-100 mb-3">
+	              	<h2><a href="work-single.html">Protesis de Brazo</a></h2>
+	              	<span>Labotario de Protesis y Electronica Medica</span>
+	              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(../../static/AcademiaApp/images/work-6.jpg);">
+            	<a href="{% static 'AcademiaApp/images/work-6.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="fa fa-expand"></span>
+	    				</a>
+            	<div class="desc w-100 px-4">
+	              <div class="text w-100 mb-3">
+	              	<h2><a href="work-single.html">Extracción y Cambio de Acueductos</a></h2>
+	              	<span>Laboratorio de Construcción y Densidad de Materiales</span>
+	              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(../../static/AcademiaApp/images/work-7.jpg);">
+            	<a href="{% static 'AcademiaApp/images/work-7.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="fa fa-expand"></span>
+	    				</a>
+            	<div class="desc w-100 px-4">
+	              <div class="text w-100 mb-3">
+	              	<h2><a href="work-single.html">Seleccionador de Café</a></h2>
+	              	<span>Ingenieria Mecánica</span>
+	              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(../../static/AcademiaApp/images/work-8.jpg);">
+            	<a href="{% static 'AcademiaApp/images/work-8.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="fa fa-expand"></span>
+	    				</a>
+            	<div class="desc w-100 px-4">
+	              <div class="text w-100 mb-3">
+	              	<h2><a href="work-single.html">Sistema Hidráulico de Control</a></h2>
+	              	<span>Laboratorio de Hidráulica</span>
+	              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>	
+    <!-- Proyectos End -->
+
+    {% endblock %}

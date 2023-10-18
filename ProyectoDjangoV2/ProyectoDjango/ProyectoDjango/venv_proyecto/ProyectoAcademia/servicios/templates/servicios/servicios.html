@@ -1,0 +1,41 @@
+{% extends "AcademiaApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<html>
+    <body>
+        <div style="width: 75%; margin: 20px auto; text-align: center; color: gray; font-size: larger;">
+            <a style="color: white">Estos son los servicios que la ACADEMIA USAC pone a su disposición:</a>
+        </div>
+        {% for servicio in servicios %}
+        <div style="height: 100px;"></div>
+        <!-- Imagen y descripcion -->
+        <div class="container">
+            <div class="row align-items-center justify-content-center justify-content-lg-start">
+                <div class="col-10 col-lg-7 text-center text-lg-start">
+                    <h1 class="text-white mb-4 pb-3 animated slideInDown">{{servicio.titulo}}</h1>
+                    <a href="#" class="btn btn-primary py-3 px-5 animated slideInDown">Leer más<i class="fa fa-arrow-right ms-3"></i></a>
+                    <!-- Contenido del menú desplegable -->
+                    <div class="dropdown-content">
+                        <p class="course-description" style="color: white">
+                            {{servicio.contenido}}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
+                    <img class="img-fluid" src="{{servicio.imagen.url}}" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Imagen y descripcion End -->  
+        
+       
+        
+        {% endfor%}
+        <div><br><br><br></div>
+    </body>
+</html>
+
+{% endblock %}

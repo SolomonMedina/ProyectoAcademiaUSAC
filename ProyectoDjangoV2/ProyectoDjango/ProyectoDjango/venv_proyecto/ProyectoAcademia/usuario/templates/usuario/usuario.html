@@ -1,0 +1,69 @@
+{% extends "AcademiaApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<style>
+        .tarjeta-usuario {
+            background: linear-gradient(to right, #e74a01, #FFD700); 
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .imagen-perfil {
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 50%;
+            margin: 10px 0;
+        }
+
+        .cursos-asignados {
+            margin-top: 20px;
+        }
+</style>
+<div class="tarjeta-usuario">
+    <img src="{{ datos_usuario.imagen.url }}" alt="Foto de perfil de {{ datos_usuario.nombre }}" class="imagen-perfil">
+
+    <h2>{{ datos_usuario.nombre }} {{ datos_usuario.apellido }}</h2>
+    <p><strong>DPI:</strong> {{ datos_usuario.dpi }}</p>
+    <p><strong>Fecha de Nacimiento:</strong> {{ datos_usuario.fecha_nacimiento }}</p>
+    <p><strong>Teléfono:</strong> {{ datos_usuario.telefono }}</p>
+    <p><strong>Email:</strong> {{ datos_usuario.email }}</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        {% for curso in cursos_asignados %}
+            <div class="col-md-3">
+                <div class="card" style="width: 100%; margin: 20px 20px;">
+                    <a href="{% url 'Seleccionado' curso.id %}"><img src="{{curso.imagen.url}}" class="card-img-top"></a>
+                    <a href="{% url 'Seleccionado' curso.id %}" style="color: rgb(48, 44, 44);"><div class="card-body" style="text-align: center;">
+                        <h7 class="card-title"><b>{{curso.nombre}}</h7></b><br>
+                        <h7 class="card-title">{{curso.descripcion}}</h7><br><br>
+                        <p class="card-title">Q&nbsp;{{curso.precio}}</p>
+                    </div></a>
+                    <div class="card-footer text-center" >
+                        <a style="margin: 0px 0px 0px -10px; color: black;">Su nota actual es:
+                        {% for asignacion in curso.asignacionalumnocurso_set.all %}
+                            {% if asignacion.alumno == user %}
+                                {{ asignacion.nota }}
+                            {% endif %}
+                        {% endfor %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor%}
+        <section>
+            <div style="width: 75%; margin: 40px auto; text-align: center; color: gray;">
+                <a href="{% url 'generar_certificado' %}" class="btn btn-primary">Generar Certificado</a>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

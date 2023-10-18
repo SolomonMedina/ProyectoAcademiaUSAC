@@ -1,0 +1,28 @@
+{% extends "AcademiaApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div style="width: 75%; margin: 20px auto; text-align: center; color: gray; font-size: larger;">
+        <a style="color: white">Debe iniciar sesión para asignarse</a>
+    </div>
+    <div class="row">
+        {% for curso in cursos %}
+            <div class="col-md-3">
+                <div class="card" style="width: 100%; margin: 20px 20px;">
+                    <img src="{{curso.imagen.url}}" class="card-img-top">
+                    <div class="card-body" style="text-align: center; color: rgb(48, 44, 44)">
+                        <h7 class="card-title"><b>{{curso.nombre}}</h7></b><br>
+                        <h7 class="card-title">{{curso.descripcion}}</h7><br><br>
+                        <p class="card-title">Q&nbsp;{{curso.precio}}</p>
+                    </div>
+                    <div class="card-footer text-center" >
+                        <a href="#" class="btn btn-danger" style="margin: 0px 0px 0px -10px;">Login para Asignar</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor%}
+    </div>
+</div>
+{% endblock %}

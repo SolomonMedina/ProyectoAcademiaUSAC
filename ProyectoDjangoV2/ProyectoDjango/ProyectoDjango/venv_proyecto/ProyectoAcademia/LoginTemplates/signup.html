@@ -1,0 +1,17 @@
+{% extends "AcademiaApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <body>
+        <h3>signup</h3>
+        <form action="signup" method="POST">
+        {% csrf_token %}
+            
+
+            <button type="submit">Crear cuenta</button>
+        </form>
+    </body>
+
+{% endblock %}

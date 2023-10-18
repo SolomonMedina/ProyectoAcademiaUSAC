@@ -1,0 +1,51 @@
+<table class="table table-bordered" style="color: white;">
+    <thead>
+        <tr>
+            <th colspan="3" class="text-center">
+                Lista de cursos asignados
+            </th>
+        </tr>
+        {% if request.session.registro.items %}
+        <tr>
+            <th>Curso</th>
+            <th>Costo</th>
+            <th>Del</th>
+        </tr>
+        {% endif %}
+    </thead>
+    <tbody>
+        {% if request.session.registro.items %}
+            {% for key, value in request.session.registro.items %}
+                <tr class="text-center">
+                    <td>{{value.nombre}}</td>
+                    <td style="text-align: right;">Q   {{value.precio}}</td>
+                    <td>
+                            <a href="{% url 'registro:eliminar' value.curso_id %}" class="btn btn-sm btn-danger">-</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="3">
+                    <div class="alert alert-danger text-center">
+                        No hay cursos seleccionados
+                    </div>
+                </td>
+            </tr>
+        {% endif %}
+    </tbody>
+    {% if request.session.registro.items %}
+    <tfoot>
+        <tr>
+            <td>Costo total:</td>
+            <td colspan="2" style="text-align: center;">Q {{costo_total_cursos}}</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: center;">
+                <a href="{% url 'procesar_asignacion' %}" class="btn btn-success">Guardar Asignación</a>
+            </td>
+        </tr>
+       
+    </tfoot>
+    {% endif %}
+</table>
